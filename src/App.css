@@ -1,0 +1,522 @@
+/* ზედა მენიუ */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding: 24px 5%;
+  border-bottom: 1px solid #303030;
+}
+
+.logo {
+  color: #f4f1eb;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -2px;
+}
+
+.logo span {
+  color: #ff603b;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navigation a {
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.navigation a:hover {
+  color: #ff603b;
+}
+
+/* მთავარი ეკრანი */
+
+.hero {
+  padding: 64px 5% 80px;
+}
+
+.hero-label,
+.section-label {
+  margin-bottom: 40px;
+  color: #999999;
+  font-size: 11px;
+  line-height: 1.6;
+  letter-spacing: 2px;
+}
+
+.hero-title {
+  font-size: clamp(36px, 7.8vw, 120px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.06em;
+}
+
+.hero-title > span {
+  color: #ff603b;
+}
+
+.hero-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.hero-description {
+  max-width: 360px;
+  color: #999999;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.work-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 18px 24px;
+  background: #f4f1eb;
+  color: #111111;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.work-button:hover {
+  background: #ff603b;
+}
+
+/* ვებპროექტები */
+
+.work-section {
+  padding: 72px 5%;
+  background: #f4f1eb;
+  color: #111111;
+}
+
+.work-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+.work-heading h2,
+.gallery-heading h2,
+.services-section > h2 {
+  font-size: clamp(32px, 4vw, 60px);
+  font-weight: 500;
+  letter-spacing: -0.05em;
+}
+
+.work-heading h2 span,
+.gallery-heading h2 > span {
+  color: #b9361b;
+}
+
+.work-heading p {
+  color: #666666;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.project-card {
+  min-width: 0;
+}
+
+.project-cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  aspect-ratio: 4 / 3;
+  padding: 24px;
+}
+
+.project-cover > span {
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.project-cover h3 {
+  margin: 24px 0;
+  font-size: clamp(22px, 2.5vw, 38px);
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+  overflow-wrap: anywhere;
+}
+
+.project-cover small {
+  font-size: 11px;
+}
+
+.cover-brew {
+  background: #d4c1a5;
+  color: #38291f;
+}
+
+.cover-fashion {
+  background: #d6d5cf;
+  color: #292b27;
+}
+
+.project-preview {
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #e7e3db;
+}
+
+.project-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.3s ease;
+}
+
+.project-preview:hover img {
+  transform: scale(1.03);
+}
+
+.project-name {
+  margin-top: 18px;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.project-card > p {
+  margin-top: 14px;
+  color: #555555;
+  font-size: 13px;
+}
+
+/* გრაფიკული ნამუშევრები */
+
+.gallery-section {
+  padding: 72px 5%;
+  background: #f4f1eb;
+  color: #111111;
+  border-top: 1px solid #d5d1c9;
+}
+
+.gallery-heading {
+  margin-bottom: 36px;
+}
+
+.gallery-heading .section-label {
+  margin-bottom: 16px;
+  color: #666666;
+}
+
+.artwork-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px 24px;
+}
+
+.artwork-card {
+  min-width: 0;
+  margin: 0;
+}
+
+.artwork-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 4 / 5;
+  background: #e7e3db;
+}
+
+.artwork-link img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.artwork-card figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 14px;
+  font-size: 13px;
+}
+
+.artwork-card figcaption > span:last-child {
+  color: #666159;
+}
+
+/* ჩემ შესახებ */
+
+.about-section {
+  padding: 80px 5%;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 64px;
+  align-items: start;
+}
+
+.about-content h2 {
+  font-size: clamp(32px, 4vw, 60px);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -0.05em;
+}
+
+.about-content h2 span {
+  color: #ff603b;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  color: #aaaaaa;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.skill-tags span {
+  padding: 10px 14px;
+  border: 1px solid #444444;
+  font-size: 12px;
+}
+
+/* სერვისები */
+
+.services-section {
+  padding: 80px 5%;
+  border-top: 1px solid #303030;
+}
+
+.services-section > h2 {
+  margin-bottom: 48px;
+}
+
+.services-section > h2 span {
+  color: #ff603b;
+}
+
+.service-item {
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) 32px;
+  gap: 24px;
+  padding: 32px 0;
+  border-top: 1px solid #303030;
+}
+
+.service-item:last-child {
+  border-bottom: 1px solid #303030;
+}
+
+.service-number {
+  padding-top: 6px;
+  color: #999999;
+  font-size: 12px;
+}
+
+.service-item h3 {
+  font-size: clamp(22px, 3vw, 32px);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.service-item p {
+  max-width: 480px;
+  margin-top: 14px;
+  color: #999999;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.service-symbol {
+  color: #ff603b;
+  font-size: 28px;
+}
+
+/* კონტაქტი */
+
+.contact-section {
+  padding: 80px 5%;
+  background: #f4f1eb;
+  color: #111111;
+}
+
+.contact-section .section-label {
+  color: #666666;
+}
+
+.contact-section h2 {
+  font-size: clamp(48px, 8vw, 110px);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.06em;
+}
+
+.contact-section h2 span {
+  color: #b9361b;
+}
+
+.contact-description {
+  max-width: 400px;
+  margin-top: 28px;
+  color: #555555;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.contact-placeholder {
+  margin-top: 32px;
+  color: #666666;
+  font-size: 13px;
+}
+
+/* გვერდის ქვედა ნაწილი */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 28px 5%;
+}
+
+.footer p {
+  color: #999999;
+  font-size: 12px;
+}
+
+.back-to-top {
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.back-to-top:hover {
+  color: #ff603b;
+}
+
+/* პლანშეტი */
+
+@media (max-width: 900px) {
+  .artwork-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 800px) {
+  .project-grid,
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .about-content {
+    gap: 28px;
+  }
+
+  .work-heading {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .project-cover h3 {
+    font-size: 36px;
+  }
+}
+
+/* მობილური */
+
+@media (max-width: 600px) {
+  .hero,
+  .work-section,
+  .gallery-section,
+  .about-section,
+  .services-section,
+  .contact-section {
+    padding: 48px 5%;
+  }
+
+  .hero-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .service-item {
+    grid-template-columns: 24px minmax(0, 1fr) 24px;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navigation {
+    gap: 14px;
+  }
+
+  .navigation a {
+    font-size: 12px;
+  }
+
+  .artwork-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}
+/* Project browsing and contact */
+.cover-playzone { background: #d5dcf0; color: #242b42; }
+.project-open { display: block; width: 100%; padding: 0; text-align: left; border: 0; color: inherit; background: transparent; }
+.project-name { display: block; }
+.project-cover > strong { margin: 24px 0; font-size: clamp(22px, 2.5vw, 38px); font-weight: 500; line-height: 1.1; letter-spacing: -.05em; overflow-wrap: anywhere; }
+.source-link { display: inline-block; margin-top: 12px; font-size: 12px; text-underline-offset: 4px; }
+.work-filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+.work-filters button { padding: 11px 18px; border: 1px solid #aaa79e; background: transparent; color: #111; font-size: 13px; }
+.work-filters button[aria-pressed="true"] { background: #111; color: #f4f1eb; }
+.contact-email { display: inline-flex; align-items: center; gap: 20px; max-width: 100%; margin-top: 32px; padding-bottom: 12px; border-bottom: 1px solid currentColor; color: #111; text-decoration: none; font-size: clamp(16px, 2.5vw, 28px); overflow-wrap: anywhere; }
+.contact-email:hover { color: #b9361b; }
+.contact-email span { flex-shrink: 0; }
+.contact-note { margin-top: 15px; font-size: 12px; line-height: 1.6; color: #666; }
+.project-dialog { width: min(760px, 92vw); max-height: 88dvh; padding: 0; border: 1px solid #444; background: #f4f1eb; color: #111; }
+.project-dialog::backdrop { background: #000c; }
+.detail-content { padding: 32px; }
+.detail-close { display: block; margin-left: auto; margin-bottom: 28px; padding: 10px 14px; color: #111; border: 1px solid #aaa; background: transparent; }
+.detail-content .section-label { margin-bottom: 18px; color: #666; }
+.detail-content h2 { font-size: clamp(25px, 5vw, 46px); overflow-wrap: anywhere; letter-spacing: -.04em; }
+.detail-description { margin: 24px 0; font-size: 16px; line-height: 1.7; }
+.detail-note, .detail-links > span { color: #666; font-size: 13px; line-height: 1.6; }
+.detail-links { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; margin-top: 28px; }
+.detail-links a { padding: 13px 18px; background: #111; color: #f4f1eb; text-decoration: none; font-size: 13px; }
+.detail-image { display: block; width: 100%; height: auto; margin-top: 24px; }
+.skip-link { position: absolute; left: 16px; top: -100px; padding: 14px; background: #f4f1eb; color: #111; z-index: 20; }
+.skip-link:focus { top: 16px; }
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (max-width: 600px) { .detail-content { padding: 20px; } }
