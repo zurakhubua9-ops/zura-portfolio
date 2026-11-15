@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { artworks, projects, assetUrl, email } from './content'
+import { artworks, projects, assetUrl, previewUrl, email } from './content'
 import ProjectDetails from './ProjectDetails'
 import './App.css'
 
@@ -17,7 +17,7 @@ function App() {
 
         <nav className="navigation" aria-label="Main navigation">
           <a href="#work">Work</a>
-          <a href="#about">About</a>
+          <a href="#about">About</a><a href="#services">Services</a>
           <a href="#contact">Contact ↗</a>
         </nav>
       </header>
@@ -53,7 +53,7 @@ function App() {
             <h2>
               Selected Work<span>.</span>
             </h2>
-            <p>WEB DEVELOPMENT / 01–03</p>
+            <p>{filter === 'Design' ? 'GRAPHIC DESIGN / 01–10' : 'WEB DEVELOPMENT / 01–03'}</p>
           </div>
 
           <div className="work-filters" role="group" aria-label="Filter selected work">
@@ -92,7 +92,7 @@ function App() {
                     )}
                     <span className="project-name">{project.title} ↗</span>
                   </button>
-                  <p>{project.category}</p>
+                  <p>{project.category}</p><a className="source-link live-link" href={project.liveUrl} target="_blank" rel="noreferrer">Visit website ↗</a>
                   {project.sourceUrl && (
                     <a className="source-link" href={project.sourceUrl} target="_blank" rel="noreferrer">GitHub ↗</a>
                   )}
@@ -122,7 +122,7 @@ function App() {
                   aria-label={`Open ${artwork.title} full size`}
                 >
                   <img
-                    src={assetUrl(artwork.image)}
+                    src={previewUrl(artwork.image)}
                     alt={`${artwork.title} — graphic design by Zura`}
                     loading="lazy"
                   />

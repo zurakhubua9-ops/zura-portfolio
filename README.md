@@ -1,17 +1,26 @@
 # ZURA Portfolio
 
-React + Vite + CSS portfolio for Zura. Includes Home, Selected Work, ten graphic artworks, project detail dialogs, About, Services, and Contact.
+React + Vite + CSS portfolio with Home, Selected Work, project details, a ten-piece design gallery, About, Services and Contact.
 
-## Run
+## Run in VS Code
 
-Use Node.js 26 with npm, matching the installed development environment.
+Open this project folder. In a terminal:
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Open the Local address printed by Vite. Keep the terminal running. Stop with Ctrl+C.
+Open the Local address printed by Vite. Keep that terminal open; Ctrl+C stops the server. Node.js 26 is specified in `.nvmrc`. Dependencies are already installed on the original development computer, so `npm run dev` is enough there.
+
+If Windows cannot find Node, restart VS Code after installation. In Command Prompt, this temporary fix also works:
+
+```bat
+set "PATH=C:\Program Files\nodejs;%PATH%"
+npm run dev
+```
+
+## Verify and build
 
 ```sh
 npm run lint
@@ -20,31 +29,35 @@ npm run build
 npm run preview
 ```
 
-## Files
+The production site is generated in `dist/`. Opening `index.html` directly is not supported; use the server URL.
 
-- `src/App.jsx`: complete layout and filters.
-- `src/App.css`: component and responsive styles.
-- `src/index.css`: global reset, colors, and typography.
-- `src/content.js`: artwork paths, project links, and public contact email.
-- `src/ProjectDetails.jsx`: accessible native project dialog.
-- `public/designs/`: the ten original artwork files, unchanged.
-- `public/projects/`: add project screenshots here.
-- `.github/workflows/ci.yml`: lint, asset validation, and production build on pushes and pull requests.
+## Editing
+
+- `src/content.js`: project URLs, descriptions, artwork titles and public email.
+- `src/App.jsx`: sections, project cards and filters.
+- `src/ProjectDetails.jsx`: native modal with Escape support and focus restoration.
+- `src/App.css` and `src/index.css`: responsive layout and global styling.
+- `public/designs/`: ten original PNG files, preserved unchanged.
+- `public/previews/`: lightweight JPEG copies, approximately 1.5 MB in total; used by the gallery. Clicking a design opens the original PNG.
+- `public/projects/`: actual screenshots of the three live websites.
+- `.github/workflows/ci.yml`: lint, asset validation and build on pushes and pull requests.
+
+## Connected projects
+
+- PLAYZONE: https://zurakhubua9-ops.github.io/playzone/
+- BREWCOFFEESHOP: https://zurakhubua9-ops.github.io/BREWCOFFEESHOP/
+- ONEMODE (the FASHION project): https://zurakhubua9-ops.github.io/onemode/
+
+Each project has its matching GitHub source link and a description. These are portfolio concepts; descriptions do not claim real customers, purchases or reservations.
 
 ## Contact
 
-The public email is zurakhubua9@gmail.com. The mailto link opens the visitor’s email app. The site does not automatically send or store messages.
+The contact link opens an email draft to zurakhubua9@gmail.com in the visitor's email app. No backend or credentials are required. Messages are sent by the visitor, not automatically by this site.
 
-## Missing project materials
+## Publishing
 
-PLAYZONE, BREWCOFFEESHOP, and FASHION screenshots are not present yet. Their image fields are null to avoid broken images. Add `playzone.png`, `brew.png`, and `fashion.png` to `public/projects/`, then set each project's image in `src/content.js` to `projects/<filename>` (matching the real extension).
+The source repository is https://github.com/zurakhubua9-ops/zura-portfolio. Saving code to GitHub does not publish the portfolio as a website.
 
-PLAYZONE and BREWCOFFEESHOP have verified GitHub repository links. Live website URLs and the FASHION repository URL still need to be supplied; do not invent them. Set the matching `liveUrl` and `sourceUrl` values when known.
+Deploy the generated `dist/` folder to a static host. Build command: `npm run build`; output directory: `dist`. Relative asset URLs support hosting under a repository subdirectory. No environment variables or secrets are needed. Do not upload `node_modules`.
 
-The actual ninth artwork is `orange.png`, so the gallery uses it instead of the missing `scarpa.png`. Rename the generic Design 03 title after confirming its intended title. Before public release, confirm project descriptions and About/Services copy.
-
-## Git
-
-Track source, `package-lock.json`, configuration, and `public/` assets. `node_modules/`, `dist/`, local environment files, and logs are ignored. This project does not need secrets. The original PNGs are intentionally preserved; optimized copies can be created later for faster loading.
-
-GitHub repository storage does not by itself publish the website. No deployment workflow is included. A static host can serve the built `dist/` directory. Asset paths support a repository subdirectory via Vite's relative base.
+The three project URLs and all artwork assets are connected. Remaining launch choice: the host/public URL for the portfolio itself and, optionally, a custom domain. A CV, portrait and social links are optional, not required to run this portfolio.

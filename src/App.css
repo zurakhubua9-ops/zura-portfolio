@@ -520,3 +520,12 @@
 .skip-link:focus { top: 16px; }
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 @media (max-width: 600px) { .detail-content { padding: 20px; } }
+
+/* Real project previews keep their original screenshot proportions. */
+.project-preview { display: block; aspect-ratio: 3 / 2; overflow: hidden; background: #ddd9d0; }
+.project-preview img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform .35s ease; }
+.project-open:hover .project-preview img { transform: scale(1.025); }
+.project-name { margin-top: 20px; font-size: clamp(18px, 2vw, 25px); overflow-wrap: anywhere; }
+.live-link { margin-right: 20px; font-weight: 600; }
+@media (max-width: 400px) { .header { gap: 12px; } .navigation { gap: 10px; } .navigation a { font-size: 11px; } .logo { font-size: 26px; } }
+@media (prefers-reduced-motion: reduce) { .project-open:hover .project-preview img { transform: none; } }
