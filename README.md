@@ -34,7 +34,7 @@ The production site is generated in `dist/`. Opening `index.html` directly is no
 ## Editing
 
 - `src/content.js`: project URLs, descriptions, artwork titles and public email.
-- `src/App.jsx`: sections, project cards and filters.
+- `src/App.jsx`: sections, featured projects and expandable design gallery.
 - `src/ProjectDetails.jsx`: native modal with Escape support and focus restoration.
 - `src/App.css` and `src/index.css`: responsive layout and global styling.
 - `public/designs/`: ten original PNG files, preserved unchanged.
@@ -60,4 +60,5 @@ The source repository is https://github.com/zurakhubua9-ops/zura-portfolio. Savi
 
 Deploy the generated `dist/` folder to a static host. Build command: `npm run build`; output directory: `dist`. Relative asset URLs support hosting under a repository subdirectory. No environment variables or secrets are needed. Do not upload `node_modules`.
 
-The three project URLs and all artwork assets are connected. Remaining launch choice: the host/public URL for the portfolio itself and, optionally, a custom domain. A CV, portrait and social links are optional, not required to run this portfolio.
+The three project URLs and all artwork assets are connected. Live portfolio: https://zura-khubua-portfolio.zurakhubua9.chatgpt.site. A custom domain is optional. A CV, portrait and social links are optional, not required to run this portfolio.
+
